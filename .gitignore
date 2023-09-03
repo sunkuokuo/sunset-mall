@@ -13,7 +13,5 @@ buildNumber.properties
 **/.mvn
 **/target/
 .idea
-mall-generator/src/main/resources/static/*
-mall-generator/src/main/resources/template/*
-mall-generator/src/main/resources/views/*
-mall-admin/src/main/resources/static/*
+mall-generator
+mall-admin
