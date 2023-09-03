@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>mall-ware</artifactId>
-	<version>${parent.version}</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>mall-ware</name>
 	<description>仓储服务</description>
 

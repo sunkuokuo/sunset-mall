@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>mall-member</artifactId>
-	<version>${parent.version}</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>mall-member</name>
 	<description>会员服务</description>
 

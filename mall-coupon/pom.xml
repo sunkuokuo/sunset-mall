@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>mall-coupon</artifactId>
-	<version>${parent.version}</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>mall-coupon</name>
 	<description>优惠券服务</description>
 
