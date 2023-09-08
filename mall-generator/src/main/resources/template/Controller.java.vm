@@ -16,6 +16,7 @@ import ${mainPath}.common.utils.PageUtils;
 import ${mainPath}.common.utils.R;
 
 
+
 /**
  * ${comments}
  *
@@ -24,15 +25,15 @@ import ${mainPath}.common.utils.R;
  * @date ${datetime}
  */
 @RestController
-@RequestMapping("${moduleName}/${pathName}")
+@RequiredArgsConstructor
+@RequestMapping("${moduleName}/${pathName}" )
 public class ${className}Controller {
-    @Autowired
-    private ${className}Service ${classname}Service;
+    private final ${className}Service ${classname}Service;
 
     /**
      * 列表
      */
-    @RequestMapping("/list")
+    @RequestMapping("/list" )
     public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = ${classname}Service.queryPage(params);
 
@@ -43,8 +44,8 @@ public class ${className}Controller {
     /**
      * 信息
      */
-    @RequestMapping("/info/{${pk.attrname}}")
-    public R info(@PathVariable("${pk.attrname}") ${pk.attrType} ${pk.attrname}) {
+    @RequestMapping("/info/{${pk.attrname}}" )
+    public R info(@PathVariable("${pk.attrname}" ) ${pk.attrType} ${pk.attrname}) {
             ${className}Entity ${classname} = ${classname}Service.getById(${pk.attrname});
 
         return R.ok().put("${classname}", ${classname});
@@ -53,7 +54,7 @@ public class ${className}Controller {
     /**
      * 保存
      */
-    @RequestMapping("/save")
+    @RequestMapping("/save" )
     public R save(@RequestBody ${className}Entity ${classname}) {
             ${classname}Service.save(${classname});
 
@@ -63,7 +64,7 @@ public class ${className}Controller {
     /**
      * 修改
      */
-    @RequestMapping("/update")
+    @RequestMapping("/update" )
     public R update(@RequestBody ${className}Entity ${classname}) {
             ${classname}Service.updateById(${classname});
 
@@ -73,7 +74,7 @@ public class ${className}Controller {
     /**
      * 删除
      */
-    @RequestMapping("/delete")
+    @RequestMapping("/delete" )
     public R delete(@RequestBody ${pk.attrType}[] ${pk.attrname}s) {
             ${classname}Service.removeByIds(Arrays.asList(${pk.attrname}s));
 
