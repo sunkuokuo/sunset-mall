@@ -14,31 +14,31 @@
       </el-form-item>
     </el-form>
     <el-table
-            :data="dataList"
-            border
-            v-loading="dataListLoading"
-            @selection-change="selectionChangeHandle"
-            style="width: 100%;">
+        :data="dataList"
+        border
+        v-loading="dataListLoading"
+        @selection-change="selectionChangeHandle"
+        style="width: 100%;">
       <el-table-column
-              type="selection"
-              header-align="center"
-              align="center"
-              width="50">
+          type="selection"
+          header-align="center"
+          align="center"
+          width="50">
       </el-table-column>
-      #foreach($column in $columns)
-        <el-table-column
-                prop="${column.attrname}"
-                header-align="center"
-                align="center"
-                label="${column.comments}">
-        </el-table-column>
-      #end
-      <el-table-column
-              fixed="right"
+        #foreach($column in $columns)
+          <el-table-column
+              prop="${column.attrname}"
               header-align="center"
               align="center"
-              width="150"
-              label="操作">
+              label="${column.comments}">
+          </el-table-column>
+        #end
+      <el-table-column
+          fixed="right"
+          header-align="center"
+          align="center"
+          width="150"
+          label="操作">
         <template slot-scope="scope">
           <el-button type="text" size="small" @click="addOrUpdateHandle(scope.row.${pk.attrname})">修改</el-button>
           <el-button type="text" size="small" @click="deleteHandle(scope.row.${pk.attrname})">删除</el-button>
@@ -46,13 +46,13 @@
       </el-table-column>
     </el-table>
     <el-pagination
-            @size-change="sizeChangeHandle"
-            @current-change="currentChangeHandle"
-            :current-page="pageIndex"
-            :page-sizes="[10, 20, 50, 100]"
-            :page-size="pageSize"
-            :total="totalPage"
-            layout="total, sizes, prev, pager, next, jumper">
+        @size-change="sizeChangeHandle"
+        @current-change="currentChangeHandle"
+        :current-page="pageIndex"
+        :page-sizes="[10, 20, 50, 100]"
+        :page-size="pageSize"
+        :total="totalPage"
+        layout="total, sizes, prev, pager, next, jumper">
     </el-pagination>
     <!-- 弹窗, 新增 / 修改 -->
     <add-or-update v-if="addOrUpdateVisible" ref="addOrUpdate" @refreshDataList="getDataList"></add-or-update>
@@ -96,7 +96,7 @@
         this.$http.adornUrl
       ]]#
         ('/${moduleName}/${pathName}/list'),
-                method
+            method
       :
         'get',
       #
@@ -107,10 +107,10 @@
         'page'
       :
         this.pageIndex,
-                'limit'
+            'limit'
       :
         this.pageSize,
-                'key'
+            'key'
       :
         this.dataForm.key
       })
@@ -161,10 +161,10 @@
         [[this.$confirm(`确定对[id=${ids.join(',')}]进行[${id ? '删除' : '批量删除'}]操作?`, '提示', {]]
       #
         confirmButtonText: '确定',
-                cancelButtonText
+            cancelButtonText
       :
         '取消',
-                type
+            type
       :
         'warning'
       }).
@@ -176,10 +176,10 @@
           [[this.$http.adornUrl]]
         #
           ('/${moduleName}/${pathName}/delete'),
-                  method
+              method
         :
           'post',
-                  data
+              data
         :
           this.$http.adornData(ids, false)
         }).
@@ -189,13 +189,13 @@
               [[this.$message({]]
             #
               message: '操作成功',
-                      type
+                  type
             :
               'success',
-                      duration
+                  duration
             :
               1500,
-                      onClose
+                  onClose
             :
               () => {
                 this.getDataList()
