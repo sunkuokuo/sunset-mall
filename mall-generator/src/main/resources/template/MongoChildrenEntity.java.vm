@@ -13,18 +13,17 @@ import org.springframework.data.annotation.Id;
 
 /**
  * ${comments}
- *
+ * 
  * @author ${author}
  * @email ${email}
  * @date ${datetime}
  */
 @Data
-public class ${className}InnerEntity {
+public class ${className}InnerEntity  {
 
 
-    #foreach ($column in $columns)
-        private #if($column.extra == "array")List<#end$column.attrType#if($column.extra ==
-        "array")>#end $column.attrname;
-    #end
+#foreach ($column in $columns)
+private #if($column.extra == "array")List<#end$column.attrType#if($column.extra == "array")>#end $column.attrname;
+#end
 
 }
