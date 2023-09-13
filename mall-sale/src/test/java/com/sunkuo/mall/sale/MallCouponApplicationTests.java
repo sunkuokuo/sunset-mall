@@ -1,4 +1,4 @@
-package com.sunkuo.mall.coupon;
+package com.sunkuo.mall.sale;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

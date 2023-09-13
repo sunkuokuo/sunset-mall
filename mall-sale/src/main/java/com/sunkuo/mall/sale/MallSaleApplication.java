@@ -1,4 +1,4 @@
-package com.sunkuo.mall.coupon;
+package com.sunkuo.mall.sale;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2023/9/2 18:52
  */
 @SpringBootApplication
-public class MallCouponApplication {
+public class MallSaleApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(MallCouponApplication.class, args);
+		SpringApplication.run(MallSaleApplication.class, args);
 	}
 }

@@ -8,7 +8,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>mall-coupon</artifactId>
+	<artifactId>mall-sale</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mall-coupon</name>
 	<description>优惠券服务</description>
