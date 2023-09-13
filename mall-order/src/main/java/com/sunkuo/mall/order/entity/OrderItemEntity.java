@@ -2,11 +2,10 @@ package com.sunkuo.mall.order.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-import java.math.BigDecimal;
-import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 订单项信息
@@ -76,7 +75,7 @@ public class OrderItemEntity implements Serializable {
 	/**
 	 * 商品销售属性组合（JSON）
 	 */
-	private Json skuAttrsVal;
+	private String skuAttrsVal;
 	/**
 	 * 商品促销分解金额
 	 */
