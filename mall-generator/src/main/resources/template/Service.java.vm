@@ -15,6 +15,11 @@ import java.util.Map;
  */
 public interface ${className}Service extends IService<${className}Entity> {
 
+    /**
+     * 分页查询
+     * @param params 查询参数
+     * @return 分页查询结果
+     */
     PageUtils queryPage(Map<String, Object> params);
 }
 
