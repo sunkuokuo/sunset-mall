@@ -3,11 +3,13 @@ package com.sunkuo.mall.member.controller;
 import com.sunkuo.mall.common.utils.PageUtils;
 import com.sunkuo.mall.common.utils.R;
 import com.sunkuo.mall.member.entity.MemberEntity;
+import com.sunkuo.mall.member.feign.CouponFeignApi;
 import com.sunkuo.mall.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -23,6 +25,22 @@ import java.util.Map;
 @RequestMapping("member/member")
 public class MemberController {
     private final MemberService memberService;
+    private final CouponFeignApi couponFeignApi;
+
+    /**
+     * 测试远程调用
+     */
+    @RequestMapping("/getMemberCouponList")
+    public R getMemberCouponList() {
+        MemberEntity member = new MemberEntity();
+        member.setNickname("sunkuo");
+        member.setMobile("1369926661");
+        R couponList = couponFeignApi.getCouponList();
+        Map<String, Object> map = new HashMap<>();
+        map.put("member", member);
+        map.put("couponList", couponList);
+        return R.ok(map);
+    }
 
     /**
      * 列表
