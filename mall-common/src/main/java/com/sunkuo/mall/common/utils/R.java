@@ -6,9 +6,9 @@ import java.util.Map;
 /**
  * 返回数据
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年10月27日 下午9:59:27
+ * @author sunkuo
+ * @email 1369926661@qq.com
+ * @date 2023/9/13 15:26
  */
 public class R extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
@@ -18,7 +18,7 @@ public class R extends HashMap<String, Object> {
     }
 
     public static R error() {
-        return error(500, "未知异常，请联系管理员" );
+        return error(500, "未知异常，请联系管理员");
     }
 
     public static R error(String msg) {
