@@ -58,7 +58,7 @@ public class MemberReceiveAddressEntity implements Serializable {
     /**
      * 省市区代码
      */
-    private String areacode;
+    private String areaCode;
     /**
      * 是否默认
      */

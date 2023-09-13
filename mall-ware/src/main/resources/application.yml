@@ -1,1 +1,10 @@
-
+server:
+  port: 8085
+spring:
+  application:
+    name: mall-order
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.99.68.125:3306/mall_ware?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&autoReconnect=true&failOverReadOnly=false&useSSL=false
+    username: root
+    password: root123456
