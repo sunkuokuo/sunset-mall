@@ -13,5 +13,12 @@
 	<name>mall-order</name>
 	<description>订单服务</description>
 
+	<dependencies>
+		<dependency>
+			<groupId>com.sunkuo.mall</groupId>
+			<artifactId>mall-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 
 </project>
