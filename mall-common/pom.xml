@@ -12,6 +12,7 @@
     <name>mall-common</name>
     <description>公共模块</description>
 
+    <!-- 公共依赖 -->
     <dependencies>
 
         <dependency>
@@ -51,7 +52,7 @@
 
     </dependencies>
 
-
+    <!-- common模块跳过SpringBoot打包 -->
     <build>
         <plugins>
             <plugin>

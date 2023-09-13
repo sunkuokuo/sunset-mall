@@ -10,7 +10,9 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 /**
  * 异常处理器
  *
- * @author Mark sunlightcs@gmail.com
+ * @author sunkuo
+ * @email 1369926661@qq.com
+ * @date 2023-09-13 15:06:38
  */
 @Slf4j
 @RestControllerAdvice

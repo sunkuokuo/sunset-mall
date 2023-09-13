@@ -39,9 +39,9 @@ public class Constant {
     /**
      * 菜单类型
      *
-     * @author chenshun
-     * @email sunlightcs@gmail.com
-     * @date 2016年11月15日 下午1:24:29
+     * @author sunkuo
+     * @email 1369926661@qq.com
+     * @date 2023-09-13 15:06:38
      */
     @Getter
     @RequiredArgsConstructor

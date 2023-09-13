@@ -11,7 +11,9 @@ package com.sunkuo.mall.common.exception;
 /**
  * 自定义异常
  *
- * @author Mark sunlightcs@gmail.com
+ * @author sunkuo
+ * @email 1369926661@qq.com
+ * @date 2023-09-13 15:06:38
  */
 public class BizException extends RuntimeException {
     private static final long serialVersionUID = 1L;
