@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: mall-ware
+  cloud:
+    nacos:
+      server-addr: 47.99.68.125:8848
+      config:
+        file-extension: yml
+        shared-configs:
+          - data-id: mall-common.yml
+            refresh: true
+server:
+  port: 10050
